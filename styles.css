@@ -1,0 +1,13 @@
+/* Master Styles */
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td{margin:0;padding:0;font-family:Microsoft YaHei,'ËÎÌå',Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;}
+html,body{width:100%;font-family:'\5FAE\8F6F\96C5\9ED1',Arial;}
+ul,ol,li{list-style:none}
+em{font-style:normal;}
+.fl{float:left;}
+.fr{float:right;}
+a,a:link{text-decoration:none;outline:none;color:#666;}
+a:active{opacity: 0.75}
+.main-wrapper{position:relative;}
+img{border:none;display:block;}
+body{background:#eaeef5;color:#666;}
