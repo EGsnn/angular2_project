@@ -1,0 +1,7 @@
+/*路径导航*/
+.breadcrumb{width: 920px; padding: 12px 20px; background: url(/build/images/common/breadcrumb_icon.png) no-repeat left;}
+.breadcrumb li{display: inline-block;}
+.breadcrumb li a:hover{color: #ca2222; text-decoration: underline;}
+.breadcrumb li+li:before{padding: 0 3px; content: ">";}
+.breadcrumb .active{color: #0047ab;}
+/*路径导航 end*/

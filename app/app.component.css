@@ -107,13 +107,7 @@ i.icon{display:block;}
 .foot{height:50px;background:#393e45;text-align:center;}
 .foot span{font-size:14px;color:#fff;line-height:50px;}
 
-/*路径导航*/
-.breadcrumb{width: 920px; padding: 12px 20px; background: url(/build/images/common/breadcrumb_icon.png) no-repeat left;}
-.breadcrumb li{display: inline-block;}
-.breadcrumb li a:hover{color: #ca2222; text-decoration: underline;}
-.breadcrumb li+li:before{padding: 0 3px; content: ">";}
-.breadcrumb .active{color: #0047ab;}
-/*路径导航 end*/
+
 
 /*文章类目*/
 .news_column{width: 958px; height: 49px; background-color: #fafafa; border-bottom: 1px solid #e6e6e6;}
@@ -133,3 +127,4 @@ i.icon{display:block;}
 .pageChange span.spanOn{ background: #0047ab; border: 1px solid #0047ab; color: #FFF;}
 .pageChange a.page_pre,.pageChange a.page_next{ font-family: "宋体";}
 /*分页 end*/
+

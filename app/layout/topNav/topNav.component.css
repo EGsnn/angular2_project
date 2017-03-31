@@ -1,0 +1,26 @@
+/*head*/
+.head_bg{width:100%;height:60px;background:#0047ab;}
+.head{height:60px;position:relative;}
+
+/*head left*/
+.head .leftBox{margin-left:240px;line-height:60px;float:left;}
+.head .leftBox a{color:#fff;font-size:14px;padding:0 15px;}
+.head .leftBox a:hover{text-decoration:underline;}
+.head .leftBox span{color:#1e6bd6;font-size:14px;}
+
+/*head rightBOx*/
+.head .rightBox{float:right;width:350px;color:#fff;font-size:14px;}
+.head .rightBox #logIn_ID{float:right;display:block;width:80px;height:30px;background:#f0b900;color:#014099;text-align:center;line-height:30px;border-radius:15px;margin-top:15px;}
+.head .rightBox p{height:30px;margin-top:15px;margin-right:20px;line-height:30px;float:right;}
+.head .rightBox p.weather{padding-left:35px;background:url(../../images/common/weather.png) no-repeat left center; display: none;}
+
+/*head logIn_box*/
+.head .logIn_box_bg{position:absolute;width:330px;height:320px;font-size:14px;border:5px rgba(0,0,0,0.15) solid;right:0;top:60px;z-index:1000;display:none;}
+.head .logIn_box_bg .iconTop{position:absolute;display:block;width:17px;height:9px;background:url(../../images/common/triangle_top.png) no-repeat;top:-13px;right:27px;}
+.head .logIn_box{background:#FFF;width:100%;height:100%;}
+.head .logIn_box .top_title{height:60px;line-height:60px;font-size:18px;text-align:center;border-bottom:1px #ccc solid;}
+.head .logIn_box ul{padding-top:30px;padding-left:32px;}
+.head .logIn_box ul li{height:45px;margin-bottom:15px;}
+.head .logIn_box ul li input{width:198px;height:43px;border:1px #ccc solid;padding-left:15px;}
+.head .logIn_box ul li a.loginBtn{width:140px;height:45px;color:#fff;border-radius:3px;background:#0047ab;text-align:center;line-height:45px;margin-left:43px;}
+.head .logIn_box ul li a.forgetPW{float:right;font-size:14px;color:#0047ab;text-decoration:underline;margin-right:30px;}

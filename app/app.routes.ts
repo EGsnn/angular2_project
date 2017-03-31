@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { AboutRoutes } from './about/about.routes';
 import { ExampleRoutes } from './example/example.routes';
 import { IndexContentRoutes } from './indexContent/indexContent.routes';
-import { LayoutRoutes } from './layout/layout.routes';
+import { ListPageRoutes } from './listPage/listPage.routes';
 
 
 export const routes: Routes = [
@@ -14,6 +14,6 @@ export const routes: Routes = [
     },
   ...AboutRoutes,
   ...ExampleRoutes,
-  ...LayoutRoutes,
+  ...ListPageRoutes,
   ...IndexContentRoutes,
 ];

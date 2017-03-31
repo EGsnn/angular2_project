@@ -11,3 +11,8 @@ a:active{opacity: 0.75}
 .main-wrapper{position:relative;}
 img{border:none;display:block;}
 body{background:#eaeef5;color:#666;}
+
+.layout{
+    width:1200px;
+    margin: 0 auto;
+}
