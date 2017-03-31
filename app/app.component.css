@@ -60,6 +60,7 @@ i.icon{display:block;}
 /*main*/
 .main{position:relative;}
 
+.rightNav {  width:220px;background:#fff;margin-top:-60px;padding-bottom:28px;position:absolute; left:0;}
 /*--main_left*/
 .nav_left .main_left{width:220px;background:#fff;margin-top:-60px;padding-bottom:28px;float:left;position:absolute;}
 .nav_left .main_left .logo_box{padding-top:29px;padding-left:50px;margin-bottom:35px;}
@@ -91,6 +92,7 @@ i.icon{display:block;}
 .nav_left .main_left .download_file .download_title{font-size:16px;font-weight:normal;height:21px;margin-bottom:10px;}
 .nav_left .main_left .download_file .download_title i{width:23px;height:21px;float:left;background:url(/build/images/common/icon.png) no-repeat -4px -41px;}
 .nav_left .main_left .download_file .download_title span{display:inline-block;margin-left:10px;}
+
 .nav_left .main_left .download_file .download_list li{    font-size: 14px;width:85px;height:40px;line-height:40px;float:left;background:#eaeef5;text-align:center;margin:0 10px 10px 0;position:relative;border-radius:5px;}
 .nav_left .main_left .download_file .download_list li:hover{background:#0047ab;color:#fff;}
 
