@@ -7,14 +7,12 @@
     <div class="section_news clear">
         <h4 class="section_title"><i class="icon"></i><span>各中心动态</span></h4>
         <ul class="section_list">
-            <a  routerLink="/listPage" class="listPage" pageName = "market_centre"><li><i class="icon list1"></i><span>市场中心</span></li></a>
-            <a  routerLink="/listPage" class="listPage" pageName = "zg_centre"><li><i class="icon list2"></i><span>综管中心</span></li></a>
-            <a  routerLink="/listPage" class="listPage" pageName = "product_centre"><li><i class="icon list3"></i><span>产品中心</span></li></a>
-            <a  routerLink="/listPage" class="listPage" pageName = "mt_centre"><li><i class="icon list4"></i><span>媒体中心</span></li></a>
-            <a  routerLink="/listPage" class="listPage" pageName = "IT_centre"><li><i class="icon list5"></i><span>IT中心</span></li></a>
-            <a  routerLink="/listPage" class="listPage" pageName = "CG_centre"><li><i class="icon list6"></i><span>采购部</span></li></a>
+            <li *ngFor="let list of listName" ><a  routerLink="/listPage"  >{{list.name}}</a></li>
+            <!--<a  *ngFor="let list of listName"  routerLink="/listPage" class="listPage" pageName = "">{{list.name}}</a>-->
+            <!--<a  *ngFor="let list of listName"  routerLink="/listPage" class="listPage" pageName = "{{list.id}}"><li><i class="icon list1"></i><span>{{list.name}}</span></li></a>-->
         </ul>
     </div>
+
     <!-- 文件模板下载 -->
     <div class="download_file clear">
         <h4 class="download_title"><i class="icon"></i><span>文件模板下载</span></h4>
