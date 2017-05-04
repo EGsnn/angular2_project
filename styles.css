@@ -6,7 +6,7 @@ ul,ol,li{list-style:none}
 em{font-style:normal;}
 .fl{float:left;}
 .fr{float:right;}
-a,a:link{text-decoration:none;outline:none;color:#666;}
+a,a:link{text-decoration:none;outline:none;color:#666; cursor: pointer}
 a:active{opacity: 0.75}
 .main-wrapper{position:relative;}
 img{border:none;display:block;}

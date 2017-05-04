@@ -2,13 +2,29 @@ body{background:#eaeef5;color:#666;}
 /*--main_right--*/
 .main_right{width:980px;float:right;}
 /*banner*/
-.main_right .banner{width:980px;height:275px;}
-
+.main_right .banner{width:980px;height:275px;  position: relative;}
+.main_right .banner .moveNext,
+.main_right .banner .movePrev{
+    display: block;
+    position: absolute;
+    top:50%;
+    z-index:100;
+    right: 0;
+    width:34px;
+    margin-top: -32px;
+    height:64px;
+    border:none;
+    background: url("/app/images/shstock_arrow.png") right center no-repeat;
+}
+.main_right .banner .movePrev{
+    left:0;
+    background: url("/app/images/shstock_arrow.png") left center no-repeat;
+}
 /*mainList_box1*/
 .main_right .mainList_box1{height:355px;padding:20px 0 0 20px;}
 .main_right .mainList_box1 .main_title{height:24px;line-height:24px;font-weight:normal;margin-bottom:10px;}
 .main_right .mainList_box1 .main_title h3,.main_right .mainList_box2 .main_title h3{font-weight:normal;font-size:18px;}
-.main_right .mainList_box1 .main_title h3 .icon,.main_right .mainList_box2 .main_title h3 .icon{width:23px;height:21px;float:left;background:url(/build/images/common/icon.png) no-repeat -4px -82px;}
+.main_right .mainList_box1 .main_title h3 .icon,.main_right .mainList_box2 .main_title h3 .icon{width:23px;height:21px;float:left;background:url(/app/images/icon.png) no-repeat -4px -82px;}
 .main_right .mainList_box1 .main_title h3 .list2{background-position:-4px -164px;width:24px;height:22px;}
 .main_right .mainList_box1 .main_title h3 span,.main_right .mainList_box2 .main_title h3 span{display:inline-block;margin-left:10px;color:#0047ab;position:relative;top:-3px;}
 .main_right .mainList_box1 .news{margin-right:20px;}
@@ -50,7 +66,7 @@ body{background:#eaeef5;color:#666;}
 .main_right .mainList_box1 .system  .system_boxList h4{font-weight:normal;font-size:16px;height:40px;line-height:40px;padding:0 15px;border-bottom:1px #eaeef5 solid;}
 .main_right .mainList_box1 .system  .system_boxList h4 a{float:right;font-size:10px;font-weight:normal;color:#999;}
 .main_right .mainList_box1 .system  .system_boxList ul{padding:12px 0 0 17px;}
-.main_right .mainList_box1 .system  .system_boxList ul li{line-height:26px;padding-left:15px;font-size:14px;background:url(/build/images/common/triangle_r.png) no-repeat left center;}
+.main_right .mainList_box1 .system  .system_boxList ul li{line-height:26px;padding-left:15px;font-size:14px;background:url(/app/images/triangle_r.png) no-repeat left center;}
 .main_right .mainList_box1 .system  .system_boxList ul li:hover{font-weight:bold;}
 .main_right .mainList_box1 .system  .system_boxList ul li:hover a{color:#f08800;}
 
@@ -66,8 +82,8 @@ body{background:#eaeef5;color:#666;}
 .main_right .mainList_box2 .main_title ul li.train_this_show:after,.main_right .mainList_box2 .main_title ul li.staff_this_show:after{width:0;height:0;content:" ";position:absolute;left:50%;margin-left:-4px;bottom:-4px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #0047ab;}
 .main_right .mainList_box2 .train{width:500px;float:left;margin-right:20px;}
 .main_right .mainList_box2 .train .train_main,.main_right .mainList_box2 .staff .staff_main{height:155px;background:#FFF;}
-.main_right .mainList_box2 .train .train_main img,.main_right .mainList_box2 .staff .staff_main img{float:left;}
-.main_right .mainList_box2 .train .train_main .train_list_box,.main_right .mainList_box2 .staff .staff_main .staff_list_box{padding:15px 20px 0;background:#FFF;height:155px;overflow:hidden;}
+.main_right .mainList_box2 .train .train_main img,.main_right .mainList_box2 .staff .staff_main img{float:left; width: 180px; height: 155px; }
+.main_right .mainList_box2 .train .train_main .train_list_box,.main_right .mainList_box2 .staff .staff_main .staff_list_box{padding:15px 20px 0;background:#FFF;height:140px;overflow:hidden;}
 .main_right .mainList_box2 .train .train_list_box{width:280px;}
 .main_right .mainList_box2 .staff .staff_main .staff_list_box{width:220px;}
 .main_right .mainList_box2 .train .train_main ul{width:280px;float:left;display:none;}

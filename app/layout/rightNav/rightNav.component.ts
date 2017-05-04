@@ -1,34 +1,48 @@
 /**
  * Created by Administrator on 2017/3/30.
  */
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
+import { dataService } from '../../service/data.service';
+import { Router } from '@angular/router';
+import { data } from '../../service/data';
+import { Http } from '@angular/http';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+
+
 
 @Component({
     selector: 'rightNav',
     templateUrl: 'app/layout/rightNav/rightNav.component.html',
-    styleUrls: ['app/layout/rightNav/rightNav.component.css']
+    styleUrls: ['app/layout/rightNav/rightNav.component.css'],
+    providers: [dataService]
 })
-export class RightNavComponent {
-    // listName = ["市场中心","综管中心","产品中心","媒体中心","IT中心","采购部"]
-    listName = [
-        {
-            id:"market_centre",
-            name:"市场中心"
-        },{
-            id:"zg_centre",
-            name:"综管中心"
-        },{
-            id:"product_centre",
-            name:"产品中心"
-        },{
-            id:"mt_centre",
-            name:"媒体中心"
-        },{
-            id:"IT_centre",
-            name:"IT中心"
-        },{
-            id:"CG_centre",
-            name:"采购部"
-        }
-    ]
+
+export class RightNavComponent implements OnInit {
+    // Names: listName[];
+    // @Input() name: Name;
+    listName = null;
+    isLoading = true;
+    constructor(
+        private listPageService: dataService,
+        private router: Router,
+        private formBuilder: FormBuilder
+    ) { }
+
+    // getNames(): void {
+    //     this.listPageService.getNames().then(names => this.Names = names);
+    // }
+    getNames() {
+        this.listPageService.getNames().subscribe(
+            data => this.listName = data,
+            error => console.log(error),
+            () => this.isLoading = false
+        );
+        console.log(this.listName)
+    }
+    ngOnInit(): void {
+        this.getNames();
+    }
+    gotoDetail(id) {
+        this.router.navigate(['/listPage', id]);
+    }
 }

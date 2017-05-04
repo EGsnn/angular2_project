@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="wrap clear">
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        当前位置：
+        <li><a routerLink="/indexContent">首页</a></li>
+        <li><a (click)="goBack(text.c)">{{text.d}}</a></li>
+        <li>{{text.title}}</li>
+    </ol>
+    <!-- 路径导航 end -->
+    <!-- 内容开始 -->
+    <div class="content">
+        <!-- 文章类目 -->
+        <ul class="news_column">
+            <li><a href="javascript:;" class="active">正文</a></li>
+        </ul>
+        <!-- 文章类目 end -->
+        <div class="title">{{text.title}}<br><p>拟稿：<span></span>审核：<span></span>发布：<span>{{text.date}}</span></p></div>
+        <!-- 新闻开始 -->
+        <!-- <div class="summary"><span>摘要：</span></div> -->
+        <div class="article_detail">
+
+            <p>{{text.text}}</p>
+
+        </div>
+
+    </div>
+    <!-- 内容结束 -->
+</div>

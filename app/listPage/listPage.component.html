@@ -1,40 +1,29 @@
-<div class="wrap clear">
-    <breadcrumb></breadcrumb>
+<div class="wrap clear" >
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        当前位置：
+        <li><a routerLink="/indexContent">首页</a></li>
+        <li>{{title}}</li>
+    </ol>
+    <!-- 路径导航 end -->
     <!-- 内容开始 -->
     <div class="content">
         <!-- 文章类目 -->
         <ul class="news_column">
-            <li><a href="javascript:;" class="active">市场中心</a></li>
+            <li><a href="javascript:;" class="active">{{title}}</a></li>
         </ul>
         <!-- 文章类目 end -->
         <!-- 列表开始 -->
         <div class="article_list list_s">
             <div class="article_list list_s">
                 <ul>
-                    <li>
-                        <a  routerLink="/detailPage"  class="clear">
-                            <div class="list_title fl"><i class="point"></i>列表页面</div>
-                            <div class="list_time fr">2017/03/06</div>
+                    <li *ngFor="let name of Names">
+                        <a  (click)="gotoDetail(name.url)"  class="clear">
+                            <div class="list_title fl"><i class="point"></i>{{name.title}}</div>
+                            <div class="list_time fr">{{name.date}}</div>
                         </a>
                     </li>
-                    <li>
-                        <a href="market_centre/page2.html" class="clear">
-                            <div class="list_title fl"><i class="point"></i>列表页面</div>
-                            <div class="list_time fr">2017/03/06</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="market_centre/page2.html" class="clear">
-                            <div class="list_title fl"><i class="point"></i>列表页面</div>
-                            <div class="list_time fr">2017/03/06</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="market_centre/page2.html" class="clear">
-                            <div class="list_title fl"><i class="point"></i>列表页面</div>
-                            <div class="list_time fr">2017/03/06</div>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </div>

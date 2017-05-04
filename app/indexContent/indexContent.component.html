@@ -1,5 +1,16 @@
 <div class="main_right">
-<div class="banner"><img src="/build/images/index/banner.jpg" alt=""></div>
+<div class="banner">
+    <div class="myslides">
+        <ks-swiper-container  [options]="example1SwipeOptions">
+            <ks-swiper-slide *ngFor="let s of [1,2]">
+                <img src="/app/images/banner{{s}}.jpg">
+            </ks-swiper-slide>
+        </ks-swiper-container>
+        <a class="movePrev" (click)="movePrev()"></a>
+        <a class="moveNext" (click)="moveNext()"></a>
+    </div>
+
+</div>
 <div class="mainList_box1">
     <!-- 新闻公告 -->
     <div class="news fl">
@@ -10,24 +21,24 @@
             <li class=" no1 showChild">
                 <h4><span>新闻动态</span><a href="news/list_xwdt.html">MORE></a></h4>
                 <ol>
-                    <li class="yellow"><a href="news/page_wjfb_3.html">乔迁新址 公司环境焕然一新</a><span>2016/12/28</span></li>
-                    <li><a href="news/page_wjfb_2.html">再出发 公司发展迈向新篇章</a><span>2016/12/12</span></li>
-                    <li><a href="news/page_wjfb_1.html">万事具备 只待起航</a><span>2016/12/09</span></li>
+                    <li class="yellow"><a href="news/page_wjfb_3.html">列表一</a><span>2016/12/28</span></li>
+                    <li><a href="news/page_wjfb_2.html">列表一</a><span>2016/12/12</span></li>
+                    <li><a href="news/page_wjfb_1.html">列表一</a><span>2016/12/09</span></li>
                 </ol>
             </li>
             <li class="no1 ">
                 <h4><span>文件发布</span><a href="news/list_wjfb.html">MORE></a></h4>
                 <ol>
-                    <li class="yellow"><a href="downloads/news/file_report/【2017】6号 关于组织架构调整的重大公告.pdf">【2017】6号 关于组织架构调整的重大公告</a><span>2017/02/06</span></li>
-                    <li><a href="downloads/news/file_report/【2017】5号 关于吴雪翔离职暨营销中心负责人变更的公告.pdf">【2017】5号 关于吴雪翔离职暨营销中心负责人变更的公告</a><span>2017/02/06</span></li>
-                    <li><a href="downloads/news/file_report/【2017】4号 关于周爱菊等人员离职的公告.pdf">【2017】4号 关于周爱菊等人员离职的公告</a><span>2017/01/20</span></li>
+                    <li class="yellow"><a >列表一</a><span>2017/02/06</span></li>
+                    <li><a href="#">列表一</a><span>2017/02/06</span></li>
+                    <li><a href="#">列表一</a><span>2017/01/20</span></li>
                 </ol>
             </li>
             <li class="no1 ">
                 <h4><span>最新通知</span><a href="news/list_zxtz.html">MORE></a></h4>
                 <ol>
-                    <li class="yellow"><a href="downloads/news/latest_notice/春节放假通知.pdf">春节放假通知</a><span>2016/12/09</span></li>
-                    <li><a href="downloads/news/latest_notice/元旦放假通知.pdf">元旦放假通知</a><span>2016/12/09</span></li>
+                    <li class="yellow"><a href="#">列表一</a><span>2016/12/09</span></li>
+                    <li><a href="#">列表一</a><span>2016/12/09</span></li>
                 </ol>
             </li>
         </ul>
@@ -41,9 +52,9 @@
             <div class="system_boxList">
                 <h4>行政<a href="RulesAndRegulations/administration_list_xwdt.html">MORE></a></h4>
                 <ul>
-                    <li><a href="downloads/administration/《NK-XZ-012 1.0 印章管理制度》.docx">印章管理制度</a></li>
-                    <li><a href="downloads/administration/《NK-XZ-010 1.0 档案管理制度》.docx">档案管理制度</a></li>
-                    <li><a href="downloads/administration/《NK-XZ-009 1.0 快递管理办法》.docx">快递管理办法</a></li>
+                    <li><a href="#">印章管理制度</a></li>
+                    <li><a href="#">档案管理制度</a></li>
+                    <li><a href="#">快递管理办法</a></li>
                 </ul>
             </div>
             <div class="system_boxList">
@@ -67,9 +78,9 @@
             <div class="system_boxList">
                 <h4>营销<a href="RulesAndRegulations/marketing_list_xwdt.html">MORE></a></h4>
                 <ul>
-                    <li><a href="downloads/marketing/关于营销中心前端投资顾问竞聘主管的制度.pdf">营销中心竞聘主管的制度</a></li>
-                    <li><a href="downloads/marketing/手机使用管理规定 0303.docx">手机使用管理规定</a></li>
-                    <li><a href="downloads/marketing/营销中心若干管理规定-21070303（定稿）.docx">营销中心若干管理规定</a></li>
+                    <li><a href="#">营销中心竞聘主管的制度</a></li>
+                    <li><a href="#">手机使用管理规定</a></li>
+                    <li><a href="#">营销中心若干管理规定</a></li>
                 </ul>
             </div>
         </div>

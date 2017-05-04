@@ -1,0 +1,53 @@
+{
+  "data":[
+    {
+      "id":"market_centre",
+      "name":"市场中心",
+      "listData":[
+        {"id": 11,"date": "2017/02/03" , "name": "市场中心列表1","text":"546541321321"},
+        {"id": 12,"date": "2017/03/03" , "name": "市场中心列表2","text":"sdadsa"},
+        {"id": 13,"date": "2017/04/03" , "name": "市场中心列表3","text":"sdasdweqefqwrqewdsa"}
+      ]
+    },{
+      "id":"zg_centre",
+      "name":"综管中心",
+      "listData":[
+        {"id": 11,"date": "2017/02/03" , "name": "综管中心列表1","text":"546541321321"},
+        {"id": 12,"date": "2017/03/03" , "name": "综管中心列表2","text":"sdadsa"},
+        {"id": 13,"date": "2017/04/03" , "name": "综管中心列表3","text":"sdasdweqefqwrqewdsa"}
+      ]
+    },{
+      "id":"product_centre",
+      "name":"产品中心",
+      "listData":[
+        {"id": 11,"date": "2017/02/03" , "name": "产品中心列表1","text":"546541321321"},
+        {"id": 12,"date": "2017/03/03" , "name": "产品中心列表2","text":"sdadsa"},
+        {"id": 13,"date": "2017/04/03" , "name": "产品中心列表3","text":"sdasdweqefqwrqewdsa"}
+      ]
+    },{
+      "id":"mt_centre",
+      "name":"媒体中心",
+      "listData":[
+        {"id": 11,"date": "2017/02/03" , "name": "媒体中心列表1","text":"546541321321"},
+        {"id": 12,"date": "2017/03/03" , "name": "媒体中心列表2","text":"sdadsa"},
+        {"id": 13,"date": "2017/04/03" , "name": "媒体中心列表3","text":"sdasdweqefqwrqewdsa"}
+      ]
+    },{
+      "id":"IT_centre",
+      "name":"IT中心",
+      "listData":[
+        {"id": 11,"date": "2017/02/03" , "name": "IT中心列表1","text":"546541321321"},
+        {"id": 12,"date": "2017/03/03" , "name": "IT中心列表2","text":"sdadsa"},
+        {"id": 13,"date": "2017/04/03" , "name": "IT中心列表3","text":"sdasdweqefqwrqewdsa"}
+      ]
+    },{
+      "id":"CG_centre",
+      "name":"采购部",
+      "listData":[
+        {"id": 11,"date": "2017/02/03" , "name": "采购部列表1","text":"546541321321"},
+        {"id": 12,"date": "2017/03/03" , "name": "采购部列表2","text":"sdadsa"},
+        {"id": 13,"date": "2017/04/03" , "name": "采购部列表3","text":"sdasdweqefqwrqewdsa"}
+      ]
+    }
+  ]
+}

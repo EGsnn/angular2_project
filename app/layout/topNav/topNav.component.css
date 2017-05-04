@@ -3,7 +3,7 @@
 .head{height:60px;position:relative;}
 
 /*head left*/
-.head .leftBox{margin-left:240px;line-height:60px;float:left;}
+.head .leftBox{margin-left:240px;line-height:60px; height:60px; float:left;}
 .head .leftBox a{color:#fff;font-size:14px;padding:0 15px;}
 .head .leftBox a:hover{text-decoration:underline;}
 .head .leftBox span{color:#1e6bd6;font-size:14px;}

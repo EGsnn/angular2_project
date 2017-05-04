@@ -7,7 +7,7 @@
     <div class="section_news clear">
         <h4 class="section_title"><i class="icon"></i><span>各中心动态</span></h4>
         <ul class="section_list">
-            <li *ngFor="let list of listName" ><a  routerLink="/listPage"  >{{list.name}}</a></li>
+            <li *ngFor="let list of listName" ><a  (click)="gotoDetail(list.id)"  >{{list.name}}</a></li>
             <!--<a  *ngFor="let list of listName"  routerLink="/listPage" class="listPage" pageName = "">{{list.name}}</a>-->
             <!--<a  *ngFor="let list of listName"  routerLink="/listPage" class="listPage" pageName = "{{list.id}}"><li><i class="icon list1"></i><span>{{list.name}}</span></li></a>-->
         </ul>
