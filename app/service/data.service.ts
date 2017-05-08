@@ -35,7 +35,11 @@ export class dataService {
             .map(this.extractData)
             .catch(this.handleError);
     }
-
+    getNews(){
+        return this.http.get('/api/News')
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
 
     private extractData(res: Response) {
         let body = res.json();

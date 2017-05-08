@@ -132,7 +132,67 @@ export class listData implements InMemoryDbService {
             date:"2017/04/23",
             img:["ada.jsg","ada.jpg"]
         };
-        return {names,market_centre,zg_centre,product_centre,mt_centre,IT_centre,CG_centre ,textData};
+
+        let News = [{
+                title:"新闻动态",
+                id:11,
+                data:[{
+                    id:1,
+                    name:"动态弹框",
+                    date:"2017/04/27",
+                    url:"api/textData"
+                },{
+                    id:2,
+                    name:"animation list",
+                    date:"2017/03/27",
+                    url:"api/textData"
+                },{
+                    id:3,
+                    name:"列表3",
+                    date:"2017/03/27",
+                    url:"api/textData"
+                }]
+            }, {
+                title:"文件发布",
+                id:12,
+                data:[{
+                    id:1,
+                    name:"列表一",
+                    date:"2017/04/27",
+                    url:"api/textData"
+                },{
+                    id:2,
+                    name:"列表2",
+                    date:"2017/03/27",
+                    url:"api/textData"
+                },{
+                    id:3,
+                    name:"列表3",
+                    date:"2017/03/27",
+                    url:"api/textData"
+                }]
+            },{
+                title:"最新通知",
+                id:13,
+                data:[{
+                    id:1,
+                    name:"列表一",
+                    date:"2017/04/27",
+                    url:"api/textData"
+                },{
+                    id:2,
+                    name:"列表2",
+                    date:"2017/03/27",
+                    url:"api/textData"
+                },{
+                    id:3,
+                    name:"列表3",
+                    date:"2017/03/27",
+                    url:"api/textData"
+                }]
+            }];
+
+        return {names,market_centre,zg_centre,product_centre,mt_centre,IT_centre,CG_centre ,textData,News};
     }
 
 }

@@ -1,0 +1,8 @@
+<ul>
+    <li class="no1 "   *ngFor="let news of newsData" (click)="toggleHeight(news.id)" [class.hideChild]="isClose(news.id)" [class.showChild]="isOpen(news.id)" [class.animation]="animations" >
+        <h4><span>{{news.title}}</span><a href="news/list_zxtz.html">MORE></a></h4>
+        <ol >
+            <li *ngFor="let new of news.data"><a href="{{new.url}}">{{new.name}}</a><span>{{new.date}}</span></li>
+        </ol>
+    </li>
+</ul>
