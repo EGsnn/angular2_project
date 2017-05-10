@@ -72,4 +72,7 @@ export class NewsModuleComponent {
     isClose(id){
         return this.showChild !== id;
     }
+    gotoDetail(id:string | number) {
+        this.router.navigate(['/detailPage', id ]);
+    }
 }
