@@ -7,5 +7,5 @@ angular2 - es6  
 #### routes  -- ok
 #### http    -- ok
 #### swiper  -- ok
-#### animation -- wait
+#### animation -- ok
 #### chart (d3 || e-chart)   -- wait
