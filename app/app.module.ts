@@ -12,6 +12,7 @@ import { InMemoryWebApiModule }     from 'angular2-in-memory-web-api';
 import { listData }                 from './api/data.api';
 
 import { ListModule }   from './listPage/listpage.module';
+import { makeFormModule }   from './makeForm/makeForm.module';
 import { IndexContentModule } from './indexContent/indexContent.module';
 
 import { RightNavComponent }   from './layout/rightNav/rightNav.component';
@@ -25,7 +26,7 @@ import { breadcrumbComponent } from './layout/breadcrumb/breadcrumb.component';
 import { routes } from './app.routes';
 
 @NgModule({
-    imports:        [BrowserModule,HttpModule ,  JsonpModule, FormsModule,ReactiveFormsModule , ListModule ,IndexContentModule , RouterModule.forRoot(routes),InMemoryWebApiModule.forRoot(listData)],
+    imports:        [BrowserModule,HttpModule ,  JsonpModule, FormsModule,ReactiveFormsModule , ListModule , makeFormModule ,IndexContentModule , RouterModule.forRoot(routes),InMemoryWebApiModule.forRoot(listData)],
     declarations:   [AppComponent, AboutComponent, ExampleComponent,RightNavComponent,TopNavComponent,breadcrumbComponent],
     providers: [ requestOptionsProvider ],
     bootstrap:      [AppComponent]

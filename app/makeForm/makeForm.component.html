@@ -1,0 +1,60 @@
+<div class="wrap clear" >
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        当前位置：
+        <li><a routerLink="/indexContent">首页</a></li>
+        <li>制作表格</li>
+    </ol>
+    <!-- 路径导航 end -->
+    <!-- 内容开始 -->
+    <div class="content">
+        <div class="clear">
+            <div class="leftBox">
+                <h4 class="topTitle">请在文本框输入表格内容</h4>
+                <textarea></textarea>
+            </div>
+            <div class="rightBox ">
+                <h4 class="topTitle">制作和展示</h4>
+                <div class="topSelcet">
+                    <ul>
+                        <li>
+                            <p>列数：<input [(ngModel)]="lineNum" (change)="getNames()" class="lineNum" type="number" ></p>
+                            <p>行数：<input [(ngModel)]="listNum" (change)="getNames()" class="listNum" type="number"></p>
+                            <p>行高：<input [(ngModel)]="lineHNum" class="lineHNum" type="number"></p>
+                            <p>行宽：<input [(ngModel)]="lineWNum" class="lineWNum" type="number"></p>
+                        </li>
+                        <li>
+                            <p>边框宽度：<input [(ngModel)]="borderNum" class="borderNum" type="number"></p>
+                            <p>使用LI标签：<input class="typeLI" type="checkbox"></p>
+                        </li>
+                        <li class="color">
+                            <p>边框&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="borderCL" type="color"><input [(ngModel)]="borderCL" type="text"> </p>
+                            <p>背景&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="BgCL" type="color"><input [(ngModel)]="BgCL" type="text"> </p>
+                            <p>字体&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="TextCL" type="color"><input [(ngModel)]="TextCL" type="text"> </p>
+                            <p>首行字体色：<input [(ngModel)]="firstTextCL" type="color"><input [(ngModel)]="firstTextCL" type="text"> </p>
+                            <p>首行边框色：<input [(ngModel)]="firstBdCL"  type="color"><input [(ngModel)]="firstBdCL" type="text"> </p>
+                            <p>首行背景色：<input [(ngModel)]="firstTrBg" type="color"><input [(ngModel)]="firstTrBg" type="text"> </p>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="codeBox"  *ngIf="lineNum && listNum" >
+                    <table  cellspacing="0"cellpadding="0" >
+                        <thead>
+                            <td *ngFor="let i of Arrline" [ngStyle]="{'width.px': lineWNum,'height.px': lineHNum,'color': firstTextCL,'borderWidth.px':borderNum,'borderColor':firstBdCL,'backgroundColor':firstTrBg}">{{i}}</td>
+                        </thead>
+                        <tr *ngFor="let i of ArrlistNum" >
+                            <td *ngFor="let i of Arrline" [ngStyle]="{'width.px': lineWNum,'height.px': lineHNum,'color': TextCL,'borderWidth.px':borderNum,'borderColor':borderCL,'backgroundColor':BgCL}">{{i}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="btm clear">
+            <div class="htmlBox"></div>
+            <div class="cssBox"></div>
+        </div>
+    </div>
+    <!-- 内容结束 -->
+</div>

@@ -45,4 +45,7 @@ export class RightNavComponent implements OnInit {
     gotoDetail(id) {
         this.router.navigate(['/listPage', id]);
     }
+    gotoMakeForm(id) {
+        this.router.navigate(['/makeForm']);
+    }
 }
