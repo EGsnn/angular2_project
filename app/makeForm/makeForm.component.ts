@@ -21,12 +21,13 @@ export class makeFormComponent implements OnInit {
     Arrline = [];
     ArrlistNum = [];
     lineHNum = 30;
+    firstlineHNum = 35;
     lineWNum = 120;
     borderNum = 1;
 
     borderCL = '#cccccc';
     BgCL = '#f2f2f2';
-    TextCL = "#333333";
+    TextCL = "#bbbbbb";
     firstTextCL = "#ffffff";
     firstTrBg = '#abd6ce';
     firstBdCL = '#abd6ce';
