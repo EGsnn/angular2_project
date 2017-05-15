@@ -11,8 +11,10 @@
         <div class="clear">
             <div class="leftBox">
                 <h4 class="topTitle">请在文本框输入表格内容</h4>
-                <p>竖直填入：<input  type="checkbox"></p>
-                <textarea></textarea>
+                <p>竖直填入表格：<input  type="checkbox"></p>
+                <textarea  (change)="listText()" [(ngModel)]="textareaText" ></textarea>
+                <h4 class="nextTitle">导入excel表格数据</h4>
+                <input type="file">
             </div>
             <div class="rightBox ">
                 <h4 class="topTitle">参数</h4>
@@ -21,45 +23,47 @@
                         <li>
                             <p>列数：<input [(ngModel)]="lineNum" (change)="getNames()" class="lineNum" type="number" ></p>
                             <p>行数：<input [(ngModel)]="listNum" (change)="getNames()" class="listNum" type="number"></p>
-                            <p>行高：<input [(ngModel)]="lineHNum" class="lineHNum" type="number"></p>
-                            <p>行宽：<input [(ngModel)]="lineWNum" class="lineWNum" type="number"></p>
+                            <p>行高：<input [(ngModel)]="styleString.lineHNum" class="lineHNum" type="number"></p>
+                            <p>行宽：<input [(ngModel)]="styleString.lineWNum" class="lineWNum" type="number"></p>
                         </li>
                         <li>
-                            <p>首行行高：<input [(ngModel)]="firstlineHNum"  type="number"></p>
-                            <p>边框宽度：<input [(ngModel)]="borderNum" class="borderNum" type="number"></p>
+                            <p>首行行高：<input [(ngModel)]="styleString.firstlineHNum"  type="number"></p>
+                            <p>边框宽度：<input [(ngModel)]="styleString.borderNum" class="borderNum" type="number"></p>
                             <p>使用LI标签：<input class="typeLI" type="checkbox"></p>
                         </li>
                         <li class="color">
-                            <p>边框&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="borderCL" type="color"><input [(ngModel)]="borderCL" type="text"> </p>
-                            <p>背景&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="BgCL" type="color"><input [(ngModel)]="BgCL" type="text"> </p>
-                            <p>字体&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="TextCL" type="color"><input [(ngModel)]="TextCL" type="text"> </p>
-                            <p>首行字体色：<input [(ngModel)]="firstTextCL" type="color"><input [(ngModel)]="firstTextCL" type="text"> </p>
-                            <p>首行边框色：<input [(ngModel)]="firstBdCL"  type="color"><input [(ngModel)]="firstBdCL" type="text"> </p>
-                            <p>首行背景色：<input [(ngModel)]="firstTrBg" type="color"><input [(ngModel)]="firstTrBg" type="text"> </p>
-                        </li>
-                        <li>
+                            <p>边框&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="styleString.borderCL" type="color"><input [(ngModel)]="styleString.borderCL" type="text"> </p>
+                            <p>背景&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="styleString.BgCL" type="color"><input [(ngModel)]="styleString.BgCL" type="text"> </p>
+                            <p>字体&nbsp;&nbsp;&nbsp;颜色：<input [(ngModel)]="styleString.TextCL" type="color"><input [(ngModel)]="styleString.TextCL" type="text"> </p>
+                            <p>首行字体色：<input [(ngModel)]="styleString.firstTextCL" type="color"><input [(ngModel)]="styleString.firstTextCL" type="text"> </p>
+                            <p>首行边框色：<input [(ngModel)]="styleString.firstBdCL"  type="color"><input [(ngModel)]="styleString.firstBdCL" type="text"> </p>
+                            <p>首行背景色：<input [(ngModel)]="styleString.firstTrBg" type="color"><input [(ngModel)]="styleString.firstTrBg" type="text"> </p>
                         </li>
                     </ul>
                 </div>
                 <h4 class="topTitle">展示</h4>
                 <div class="codeBox"  *ngIf="lineNum && listNum" >
-                    <table  cellspacing="0"cellpadding="0" >
+                    <table id="tableId" cellspacing="0"cellpadding="0" >
                         <thead>
-                            <td *ngFor="let i of Arrline" [ngStyle]="{'width.px': lineWNum,'height.px': firstlineHNum,'color': firstTextCL,'borderWidth.px':borderNum,'borderColor':firstBdCL,'backgroundColor':firstTrBg}">头部{{i}}</td>
+                            <td *ngFor="let i of Arrline" [ngStyle]="{'width.px': styleString.lineWNum,'height.px': styleString.firstlineHNum,'color': styleString.firstTextCL,'borderWidth.px':styleString.borderNum,'borderColor':styleString.firstBdCL,'backgroundColor':styleString.firstTrBg}">头部{{i}}</td>
                         </thead>
-                        <tr *ngFor="let i of ArrlistNum" >
-                            <td *ngFor="let i of Arrline" [ngStyle]="{'width.px': lineWNum,'height.px': lineHNum,'color': TextCL,'borderWidth.px':borderNum,'borderColor':borderCL,'backgroundColor':BgCL}">{{i}}</td>
+                        <tr *ngFor="let list of listArr" >
+                            <td *ngFor="let i of list" [ngStyle]="{'width.px': styleString.lineWNum,'height.px': styleString.lineHNum,'color': styleString.TextCL,'borderWidth.px':styleString.borderNum,'borderColor':styleString.borderCL,'backgroundColor':styleString.BgCL}">{{i}}</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
+        <hr>
         <div class="btm clear">
-            <div class="htmlBox">
+            <div class="htmlBox" >
                 <h4 class="topTitle">HTML代码</h4>
+                <textarea [(ngModel)]="htmlBox"></textarea>
+
             </div>
             <div class="cssBox">
                 <h4 class="topTitle">css代码</h4>
+                <textarea [(ngModel)]="cssBox"></textarea>
             </div>
         </div>
     </div>

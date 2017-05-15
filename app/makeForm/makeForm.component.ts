@@ -3,6 +3,7 @@
  */
 import { Component ,OnInit } from '@angular/core';
 import { Router ,ActivatedRoute ,Params} from '@angular/router';
+import  { CreatHtml } from './creatHtml'
 import { dataService } from '../service/data.service';
 
 import 'rxjs/add/operator/switchMap';
@@ -11,7 +12,7 @@ import 'rxjs/add/operator/switchMap';
     selector: 'makeForm',
     templateUrl: 'app/makeForm/makeForm.component.html',
     styleUrls: ['app/makeForm/makeForm.component.css'],
-
+    providers: [ CreatHtml ],
 })
 
 export class makeFormComponent implements OnInit {
@@ -20,34 +21,59 @@ export class makeFormComponent implements OnInit {
     listNum = 6;
     Arrline = [];
     ArrlistNum = [];
-    lineHNum = 30;
-    firstlineHNum = 35;
-    lineWNum = 120;
-    borderNum = 1;
 
-    borderCL = '#cccccc';
-    BgCL = '#f2f2f2';
-    TextCL = "#bbbbbb";
-    firstTextCL = "#ffffff";
-    firstTrBg = '#abd6ce';
-    firstBdCL = '#abd6ce';
+    styleString = {
+        borderCL : '#cccccc',
+        BgCL : '#f2f2f2',
+        TextCL : "#bbbbbb",
+        firstTextCL : "#ffffff",
+        firstTrBg : '#abd6ce',
+        firstBdCL : '#abd6ce',
+        lineHNum : 30,
+        firstlineHNum : 35,
+        lineWNum : 120,
+        borderNum : 1
+    };
+    // borderCL = '#cccccc';
+    // BgCL = '#f2f2f2';
+    // TextCL = "#bbbbbb";
+    // firstTextCL = "#ffffff";
+    // firstTrBg = '#abd6ce';
+    // firstBdCL = '#abd6ce';
 
+    htmlBox = "";
+    cssBox = "";
+
+    listArr = [];
+    textareaText = "头部0 头部1 头部2 头部3 头部4\n头部0 头部1 头部2 头部3 头部4";
+    textareaTextArr ;
     isLoading = true;
     pageId = null;
     title = null;
+
+
     constructor(
         private route: ActivatedRoute,
-        private router: Router
+        private router: Router,
+        private  creatHtml1:CreatHtml
 
     ) { }
 
-    // getNames(): void {
-    //     this.listPageService.getNames().then(names => this.Names = names);
-    // }
+    listText(): void {
+        this.listArr = [];
+        this.textareaTextArr = this.textareaText.split(/[\r\n]/g);
+        // console.log(this.textareaTextArr);
+        for(let i= 0; i<this.textareaTextArr.length; i++){
+            this.listArr.push(this.textareaTextArr[i].split(/\s+/g));
+        }
+        // console.log(this.listArr);
+        this.htmlBox = this.creatHtml1.getHtml(this.listArr);
+        this.cssBox = this.creatHtml1.getCss(this.styleString);
+    }
     getNames() {
         this.Arrline = [];
         this.ArrlistNum = [];
-        console.log(this.Arrline +"ok")
+        // console.log(this.Arrline +"ok");
         for(let i =0; i<this.lineNum; i++){
             this.Arrline.push(i);
         }
@@ -57,5 +83,6 @@ export class makeFormComponent implements OnInit {
     }
     ngOnInit(): void {
         this.getNames();
+        this.listText();
     }
 }

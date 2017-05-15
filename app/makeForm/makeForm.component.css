@@ -23,7 +23,10 @@
 }
 .content .leftBox textarea{
     width:100%;
-    height:500px;
+    height:300px;
+}
+.nextTitle{
+    margin-top:30px;
 }
 /*rightBox top*/
 .rightBox{
@@ -41,7 +44,6 @@
     margin-left: 25px;
 }
 .rightBox .topSelcet ul li p{
-
     margin-bottom:8px;
 }
 .rightBox .topSelcet p input[type=number]{
@@ -89,4 +91,11 @@ table{
 .codeBox td{
     border:1px #ccc solid;
     text-align: center;
+}
+.htmlBox textarea,
+.cssBox textarea{
+    width: 430px;
+    margin-left: 10px;
+    background: #f2f2f2;
+    height:260px;
 }
