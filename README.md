@@ -8,4 +8,4 @@ angular2 - es6  
 #### http    -- ok
 #### swiper  -- ok
 #### animation -- ok
-#### chart (d3 || e-chart)   -- wait
+#### chart (ng2-chart)   -- wait
