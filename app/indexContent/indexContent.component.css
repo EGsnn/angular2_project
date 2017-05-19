@@ -29,16 +29,6 @@ body{background:#eaeef5;color:#666;}
 .main_right .mainList_box1 .main_title h3 span,.main_right .mainList_box2 .main_title h3 span{display:inline-block;margin-left:10px;color:#0047ab;position:relative;top:-3px;}
 .main_right .mainList_box1 .news{margin-right:20px;}
 
-/*system*/
-.main_right .mainList_box1 .system .system_boxTop{height:145px;margin-bottom:10px;}
-.main_right .mainList_box1 .system  .system_boxList{width:215px;height:145px;float:left;background:#FFF;margin-left:10px;}
-.main_right .mainList_box1 .system  .system_boxList:first-child{margin-left:0;}
-.main_right .mainList_box1 .system  .system_boxList h4{font-weight:normal;font-size:16px;height:40px;line-height:40px;padding:0 15px;border-bottom:1px #eaeef5 solid;}
-.main_right .mainList_box1 .system  .system_boxList h4 a{float:right;font-size:10px;font-weight:normal;color:#999;}
-.main_right .mainList_box1 .system  .system_boxList ul{padding:12px 0 0 17px;}
-.main_right .mainList_box1 .system  .system_boxList ul li{line-height:26px;padding-left:15px;font-size:14px;background:url(/app/images/triangle_r.png) no-repeat left center;}
-.main_right .mainList_box1 .system  .system_boxList ul li:hover{font-weight:bold;}
-.main_right .mainList_box1 .system  .system_boxList ul li:hover a{color:#f08800;}
 
 /*mainList_box2*/
 .main_right .mainList_box2{height:200px;padding:20px 0 30px 20px;}

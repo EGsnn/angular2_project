@@ -3,9 +3,18 @@
  */
 export class CreatHtml {
     _str = "";
-    getHtml(data): string  {
+    getHtml(data,headData): string  {
         this._str = "<table  cellspacing='0' cellpadding='0'class='tableClass' >";
-        this._str += "<tr class='trHead'></tr>";
+
+
+        this._str += "<tr class='trHead'>" ;
+        for(let i=0; i<headData.length;i++){
+            this._str += "<td>";
+            this._str += headData[i];
+            this._str += "</td>";
+        }
+        this._str +=  "</tr>";
+
         for(let i=0; i<data.length;i++){
             this._str += "<tr>";
             // console.log(data[i]+"ok");
@@ -35,7 +44,7 @@ export class CreatHtml {
     getCss(d):string{
         this._str = ".tableClass { " +
                     "border-collapse:collapse;"+
-                    "} ";
+                    "}  \n";
         this._str += ".tableClass td{ " +
                 "text-align: center;"+
                 "width:"+d.lineWNum +"px; "+
@@ -44,7 +53,7 @@ export class CreatHtml {
                 "border-color:"+d.borderCL+"; "+
                 "background-color:"+d.BgCL+"; "+
                 "color:"+d.TextCL + "; "+
-                "} ";
+                "} \n";
         this._str += ".trHead td{"+
                 "color:"+d.firstTextCL+"; "+
                 "border-color:"+d.firstBdCL+"; "+
@@ -53,6 +62,5 @@ export class CreatHtml {
                 "} ";
         return this._str;
     }
-
 }
 

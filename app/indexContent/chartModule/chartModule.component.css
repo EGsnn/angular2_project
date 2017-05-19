@@ -1,0 +1,10 @@
+/*system*/
+.system_boxTop{height:145px;margin-bottom:10px;}
+.system_boxList{width:215px;height:145px;float:left;background:#FFF;margin-left:10px;}
+.system_boxList:first-child{margin-left:0;}
+.system_boxList h4{font-weight:normal;font-size:16px;height:40px;line-height:40px;padding:0 15px;border-bottom:1px #eaeef5 solid;}
+.system_boxList h4 a{float:right;font-size:10px;font-weight:normal;color:#999;}
+.system_boxList ul{padding:12px 0 0 17px;}
+.system_boxList ul li{line-height:26px;padding-left:15px;font-size:14px;background:url(/app/images/triangle_r.png) no-repeat left center;}
+.system_boxList ul li:hover{font-weight:bold;}
+.system_boxList ul li:hover a{color:#f08800;}

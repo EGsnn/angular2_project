@@ -9,6 +9,7 @@
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs',
+      'ng2-charts': 'node_modules/ng2-charts',
       'angular2-swiper': 'node_modules/angular2-swiper',
       'swiper': 'node_modules/swiper'
 
@@ -17,6 +18,10 @@
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
+      'ng2-charts': {
+          main: 'ng2-charts.js',
+          defaultExtension: 'js'
+      },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
       'angular2-swiper': {
           main: 'dist/index.js',

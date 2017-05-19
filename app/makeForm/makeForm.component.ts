@@ -19,7 +19,7 @@ export class makeFormComponent implements OnInit {
     Names = null;
     lineNum = 5;
     listNum = 6;
-    Arrline = [];
+
     ArrlistNum = [];
 
     styleString = {
@@ -34,18 +34,13 @@ export class makeFormComponent implements OnInit {
         lineWNum : 120,
         borderNum : 1
     };
-    // borderCL = '#cccccc';
-    // BgCL = '#f2f2f2';
-    // TextCL = "#bbbbbb";
-    // firstTextCL = "#ffffff";
-    // firstTrBg = '#abd6ce';
-    // firstBdCL = '#abd6ce';
-
     htmlBox = "";
     cssBox = "";
 
     listArr = [];
-    textareaText = "头部0 头部1 头部2 头部3 头部4\n头部0 头部1 头部2 头部3 头部4";
+    Arrline = [];
+    textareaTextH = "姓名 年龄 日期 数据1 数据2";
+    textareaText = "张三 18 170516 15 58%\n李四 23 070516 20 60%";
     textareaTextArr ;
     isLoading = true;
     pageId = null;
@@ -58,7 +53,15 @@ export class makeFormComponent implements OnInit {
         private  creatHtml1:CreatHtml
 
     ) { }
-
+    creatCord():void{
+        this.htmlBox = this.creatHtml1.getHtml(this.listArr,this.Arrline);
+        this.cssBox = this.creatHtml1.getCss(this.styleString);
+    }
+    listTextH():void{
+        this.Arrline = [];
+        this.Arrline = this.textareaTextH.split(/\s+/g);
+        this.creatCord();
+    }
     listText(): void {
         this.listArr = [];
         this.textareaTextArr = this.textareaText.split(/[\r\n]/g);
@@ -67,8 +70,7 @@ export class makeFormComponent implements OnInit {
             this.listArr.push(this.textareaTextArr[i].split(/\s+/g));
         }
         // console.log(this.listArr);
-        this.htmlBox = this.creatHtml1.getHtml(this.listArr);
-        this.cssBox = this.creatHtml1.getCss(this.styleString);
+        this.creatCord();
     }
     getNames() {
         this.Arrline = [];
@@ -84,5 +86,6 @@ export class makeFormComponent implements OnInit {
     ngOnInit(): void {
         this.getNames();
         this.listText();
+        this.listTextH();
     }
 }
